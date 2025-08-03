@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "collectionName": "products",
   "info": {
     "singularName": "product",
@@ -9,6 +10,7 @@
   "options": {
     "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string",
@@ -26,9 +28,13 @@
     },
     "condition": {
       "type": "enumeration",
-      "enum": ["new", "good", "average"],
+      "required": true,
       "default": "good",
-      "required": true
+      "enum": [
+        "new",
+        "good",
+        "average"
+      ]
     },
     "price_per_day": {
       "type": "decimal",
@@ -57,18 +63,25 @@
     "images": {
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "terms_accepted": {
       "type": "boolean",
-      "default": false,
-      "required": true
+      "required": true,
+      "default": false
     },
     "status_product": {
       "type": "enumeration",
-      "enum": ["pending", "approved", "rejected"],
+      "required": true,
       "default": "pending",
-      "required": true
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ]
     }
   }
 }

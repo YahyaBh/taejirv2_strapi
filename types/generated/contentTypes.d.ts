@@ -433,7 +433,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
     district: Schema.Attribute.String;
-    images: Schema.Attribute.Media<undefined, true> & Schema.Attribute.Required;
+    images: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
