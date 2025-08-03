@@ -1,0 +1,74 @@
+{
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": "Tools or products listed for rent"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "brand": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "condition": {
+      "type": "enumeration",
+      "enum": ["new", "good", "average"],
+      "default": "good",
+      "required": true
+    },
+    "price_per_day": {
+      "type": "decimal",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "specs": {
+      "type": "richtext"
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "district": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string",
+      "required": true
+    },
+    "whatsapp_number": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "terms_accepted": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "status_product": {
+      "type": "enumeration",
+      "enum": ["pending", "approved", "rejected"],
+      "default": "pending",
+      "required": true
+    }
+  }
+}
